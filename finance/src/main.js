@@ -23,9 +23,9 @@ router.beforeEach((to, from, next) => {
   if (type === 'login') {
     next()
   } else {
-    let userInfo = JSON.parse(localStorage.getItem('userInfo'))
+    let userInfo = localStorage.getItem('userInfo')
     // console.log(userInfo)
-    if (userInfo) {
+    if (userInfo && JSON.parse(userInfo)) {
       next()
     } else {
       next('/login')

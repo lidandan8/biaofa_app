@@ -5,7 +5,7 @@ body{ background: #fff; font-size: 1.6rem; color: #666; font-family: "Microsoft 
 ul li,ol li{ list-style: none;}
 
 .am-text-dark{ color: #333;} /*文字较深的颜色*/
-
+.am-padding-0{ padding: 0;}
 .test{ border: 1px solid #f00!important;} /*测试样式*/
 
 

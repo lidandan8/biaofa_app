@@ -23,9 +23,9 @@
           <div class="text">帐号<span>15245</span></div>
           <div class="link"><span class="iconfont iconqianwang"></span></div>
         </li>
-        <li>
+        <li @click="$router.push('/BindNumber')">
           <div class="text">手机号<span>18621179658</span></div>
-          <router-link to="/BindNumber"><span class="iconfont iconqianwang"></span></router-link>
+          <div class="link"><span class="iconfont iconqianwang"></span></div>
         </li>
         <li>
           <div class="text">修改密码</div>
@@ -61,9 +61,6 @@ export default {
 
 <style scoped>
   .whiteHeader{background-color: #fff; color: #666;}  /*更改头部样式*/
-  .am-header-default .am-header-icon{ font-size: 1.8rem;}
-.am-header-default .am-header-nav a,.am-header-default .am-header-title a{color: #333333; font-weight: normal; font-family: "微软雅黑";}
-
 .Account_content,.password_content,.photo_number{ padding: 0 1rem;}
 .Account_content .head_portrait,.Account_content li{ justify-content: center; align-items: center; display: flex;}
   .Account_content .head_portrait .text{ font-size: 1.4rem;}
@@ -72,7 +69,7 @@ export default {
 .Account_content .head_portrait .photo img{  height: auto; max-width: 100%; }
  ul,li{ margin: 0; padding: 0;}
 
-.Account_content li{ border-top:#E6E6E6 solid 1px; height: 4.5rem; font-size: 1.4rem; }
+.Account_content li{ border-top:#E6E6E6 solid 1px; height: 4rem; font-size: 1.4rem; }
 .Account_content .text{ flex: 1; }
 .Account_content .text span{ float: right; }
 
