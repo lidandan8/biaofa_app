@@ -83,12 +83,20 @@
       </ul>
     </div>
     <div class="clearance"></div>
-    <div class="picCon">
-      <img src="../../assets/images/account/album.png">
-      <div class="text">
-            <p>上传图片大小不超过4M，单个商品最多可添加9张图片<br>【点击】图片查看大图,<br>【长按】图片设置为商品主图</p>
+    <div class="picCon am-margin-bottom">
+      <div class="img am-padding-xs">
+        <img src="../../assets/images/account/pic.png">
+      </div>
+      <div class="img am-padding-xs">
+        <img src="../../assets/images/account/pic.png">
+      </div>
+      <div class="img am-padding-xs">
+        <img src="../../assets/images/account/album.png">
       </div>
     </div>
+
+    <mt-button class="am-g am-margin" type="danger">删除</mt-button>
+
 
   </div>
 
@@ -123,9 +131,13 @@
   .information b{ font-size: 1.6rem; color: #33CBCC;}
   .information li .text{flex: 1; color: #999999; border-bottom: #33CBCC solid 1px; padding-left: 0.9rem;}
   .clearance{ height: 0.5rem; background: #F2F2F2;}
-  .picCon{ display: flex; padding:1rem;}
-  .picCon img{ width: 10rem; height: 10rem;}
-  .picCon .text{ flex: 1; color: #BFBFBF; font-size: 1.2rem; padding-left:0.8rem; padding-top:1rem;}
+
+  .picCon{ display: flex; padding:1rem; justify-content: space-between;}
+  .picCon .img{ width: 8rem; height: 8rem;flex: 1;}
+  .picCon .img img{ display: inline-block;}
+
+  button{ width: 94%; margin:0 auto 1rem; border: none; border-radius: 0.5rem;  display: flex; font-size: 1.4rem; color:#ffffff; background: #FF7360; height: 4rem; align-items: center; justify-content: center;}
+
 
 
 </style>
