@@ -2,7 +2,7 @@
 
 #### 介绍
 
-1. 下载项目：git clone https://gitee.com/wryking/shanghaibiaofa_app.git 
+1. 下载项目（码云）：git clone https://gitee.com/wryking/shanghaibiaofa_app.git 
 2. 进入项目：cd Finance 
 3. 安装依赖：npm install 
 4. 启动项目：npm run dev
