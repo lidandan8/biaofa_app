@@ -2,18 +2,18 @@
   <div>
     <header data-v-e772a320="" class="mint-header"><div class="mint-header-button is-left"></div> <h1 class="mint-header-title">仓库</h1> <div class="mint-header-button is-right"></div></header>
     <ul class="Central_section am-margin-top" style="margin: 0;padding: 0;">
-      <li class="Central_section1" @click="getMethod"><img src="../../../assets/images/account/query.png" alt=""></li>
-      <li class="Central_section1" @click="getMethod1"><img src="../../../assets/images/account/Warehouse3.png" alt=""></li>
-      <li class="Central_section1" @click="getMethod2"><img src="../../../assets/images/account/Warehouse2.png" alt=""></li>
+      <li  class="Central_section1" @click="$router.push('/Warehousequery')"><img src="../../../assets/images/account/query.png" alt=""></li>
+      <li class="Central_section1" ><img src="../../../assets/images/account/Warehouse3.png" alt=""></li>
+      <li class="Central_section1"><img src="../../../assets/images/account/Warehouse2.png" alt=""></li>
     </ul>
     <ul class="Central_section am-margin-top" style="margin: 0;padding: 0;">
-      <li class="Central_section1" @click="getMethod3"><img src="../../../assets/images/account/stock2.png" alt=""></li>
-      <li class="Central_section1" @click="getMethod4"><img src="../../../assets/images/account/stock1.png" alt=""></li>
+      <li class="Central_section1" ><img src="../../../assets/images/account/stock2.png" alt=""></li>
+      <li class="Central_section1" ><img src="../../../assets/images/account/stock1.png" alt=""></li>
       <li class="Central_section1"></li>
     </ul>
     <ul class="Central_section am-margin-top" style="margin: 0;padding: 0;">
-      <li class="Central_section1" @click="getMethod3"><img src="../../../assets/images/account/Warehouse4.png" alt=""></li>
-      <li class="Central_section1" @click="getMethod4"><img src="../../../assets/images/account/Warehouse1.png" alt=""></li>
+      <li class="Central_section1" ><img src="../../../assets/images/account/Warehouse4.png" alt=""></li>
+      <li class="Central_section1" ><img src="../../../assets/images/account/Warehouse1.png" alt=""></li>
       <li class="Central_section1"></li>
     </ul>
   </div>
