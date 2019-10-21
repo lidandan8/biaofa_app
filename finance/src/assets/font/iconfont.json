@@ -1,0 +1,65 @@
+{
+  "id": "1455733",
+  "name": "biaofa",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "338466",
+      "name": "前往",
+      "font_class": "qianwang",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "569038",
+      "name": "管理员",
+      "font_class": "guanliyuan",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "1306471",
+      "name": "加",
+      "font_class": "jia",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "3550640",
+      "name": "管理者",
+      "font_class": "nav_user",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "3865996",
+      "name": "审核",
+      "font_class": "shenhe",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4485650",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4735287",
+      "name": "icon_对号-线",
+      "font_class": "icon_duihao-xian",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "5809180",
+      "name": "管理员",
+      "font_class": "guanliyuan1",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    }
+  ]
+}

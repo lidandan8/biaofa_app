@@ -1,0 +1,122 @@
+<template>
+  <div>
+    <div class="header">          <mt-header class="whiteHeader" title="帐户信息">
+      <router-link to="/account?tab=manager" slot="left">
+        <mt-button icon="back"></mt-button>
+      </router-link>
+    </mt-header></div>
+    <div class="Middle">
+      <ul class="Middle_one" style="border-bottom:1px solid #E6E6E6;padding-bottom: 10px;">
+        <li class="Middle_two"><span>采购单号</span><div class="input_one">&nbsp;&nbsp;{{data.Purchase}}</div></li>
+        <li class="Middle_two"><span>日期</span><div class="input_one">&nbsp;&nbsp;{{data.date}}</div></li>
+        <li class="Middle_two"><span>商品 <span>*</span> <img src="../../images/扫一扫 (1).png" alt=""></span><div class="input_one">&nbsp;&nbsp;{{data.commodity}}</div></li>
+        <li class="Middle_two">
+          <ul>
+            <li v-for="item in data.start" :key="item" style="padding:10px 0;clear:both;overflow:hidden;border-bottom: 1px solid #E6E6E6">
+              <div style="float: left;width: 20%;"><img src="../../images/pic.png" alt=""></div>
+              <div style="float: right;width:70%;">
+                <ul>
+                  <li>{{item.name}}</li>
+                  <li style="margin:4% 0;"><div style="float: left; width: 40%;"><span style="width: 40%;display: inline-block;">数量：</span><span  style="width: 40%;display: inline-block;text-align: center;border-bottom:1px solid #33CBCC;">{{item.Number}}</span></div><div><span style="width: 16%;display: inline-block;">仓库：</span><span  style="width: 30%;display: inline-block;text-align: center;border-bottom:1px solid #33CBCC;">{{item.Warehouse}}</span></div></li>
+                  <li><div style="float: left;width: 40%;"><span>单价：</span><span  style="width: 40%;display: inline-block;text-align: center;">{{item.Price}}</span></div><div><span  style="width: 20%;">金额：</span><span   style="width: 30%;display: inline-block;text-align: center;">{{item.money}}</span></div></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>      <li class="Middle_two"><span>合计金额</span><div class="input_one">&nbsp;&nbsp;{{data.zong}}</div></li>
+        <li class="Middle_two"><span>优惠率</span><input type="text" class="input_one" v-model="Discount" @on-blur="validateJyh(Discount)"></li>
+        <li class="Middle_two"><span>优惠金额</span><input type="text" class="input_one" v-model="Discount_one"></li>
+        <li class="Middle_two"><span>其他费用</span><input type="text" class="input_one" v-model="Discount_two"></li>
+        <li class="Middle_two"><span>备注</span><input type="text" class="input_one" v-model="Discount_zor"></li>
+      </ul>
+      <ul class="Middle_one">
+        <li class="Middle_two"><span>已付金额</span><div class="input_one">&nbsp;&nbsp;￥{{data.zong}}</div></li>
+        <li class="Middle_two"><span>未付金额</span><div class="input_one">&nbsp;&nbsp;￥{{data.zong}}</div></li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <div style="width:100%;position:fixed;bottom:0">
+        <div style="width: 50%;height: 100%;float: left;text-align:center;background:rgba(255,255,255,1);border-top:1px solid rgba(230,230,230,1);"><span style="font-size:18px;display: inline-block;padding: 2.5% 0;color:rgba(51,51,51,1);"><span>总金额：</span>{{data.zong}}</span></div>
+        <div style="width: 25%;height: 100%;float: right;background:rgba(237,173,0,1);text-align:center;"><span style="font-size:18px;color:rgba(255,255,255,1);display: inline-block;padding: 5% 0;">不通过</span></div>
+        <div style="width: 25%;height: 100%;float: right;background:rgba(51,203,204,1);text-align:center;"><span style="font-size:18px;color:rgba(255,255,255,1);display: inline-block;padding: 5% 0;" @click="payment2">通过</span></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import http from '../../Api/http.js'
+import Api from '../../Api/api.js'
+export default {
+  name: 'again',
+  data () {
+    return {
+      data: {},
+      Discount: '',
+      Discount_one: '',
+      Discount_two: '',
+      Discount_zor: ''
+    }
+  },
+  beforeCreate () {
+    http(Api.sendDATA)
+      .then((res) => {
+        console.log(res)
+        this.data = res.data.startDate
+        console.log(this.data)
+      }, (error) => {
+        console.log(error)
+      })
+  },
+  methods: {
+    payment2: function () {
+      this.$router.push('/payment2')
+    }
+  }
+
+}
+</script>
+
+<style scoped>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .Middle{
+    width: 90%;
+    margin:0 auto;
+    margin-bottom: 15%;
+  }
+  .Middle_two{
+    margin-top:2%;
+  }
+  .Middle_one{
+    font-size: 1.5rem;
+  }
+  .Middle_two { line-height: 4rem;}
+  .Middle_two>span{
+    font-size:1.5rem;
+    color:rgba(51,51,51,1);
+    line-height:4rem;
+    width: 30%;
+  }
+  .Middle_two>input{
+    margin-top: 10px;
+  }
+  .input_one{
+    width:70%;
+    height: 100%;
+    float: right;
+    font-size:1.4rem;
+    outline: none;
+    BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none;
+    border-bottom:1px solid #33CBCC;
+    color:rgba(153,153,153,1);
+    display:inline-block;
+  }
+  .am-header-icon{
+    font-size: 1.4rem;position: absolute;
+    top: 50%;
+    margin-top: -1rem;
+  }
+</style>
